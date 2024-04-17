@@ -1,0 +1,19 @@
+export class Ludo {
+    constructor() {
+        this._valorDado = 0;
+    }
+
+    get valorDado() {
+        return this._valorDado;
+    }
+
+    set valorDado(valor) {
+        this._valorDado = valor;
+    }
+
+    rollDice() {
+        this._valorDado = 1 + Math.floor(Math.random() * 6);
+        console.log(`Valor do dado: ${this._valorDado}`);
+        return this._valorDado;
+    }
+}
