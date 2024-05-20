@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LudoJS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+    <link rel="stylesheet" href="./ludo/style.css">
+</head>
+<body>
+    <div class="ludo-container">
+        <h1 class="title">Vamos Jogar Ludo</h1>
+        <div class="sidebar">
+            <h3>Engenharia da Computação 9°Semestre</h3>
+            <h3>Integrantes do Grupo:</h3>
+            <ul>
+                <li>Erick Assunção Pereira Eufrasio</li>
+                <li>Henrique Jorge Barateli</li>
+                <li>Matheus Augusto de Brito Assis</li>
+                <li>Renato Lopes da Silva</li>
+            </ul>
+        </div>
+        <div class="sidenav">
+            <h3>Como Jogar Ludo Online</h3>
+            <ul>
+                <li>
+                    <strong>Inicialização do Jogo:</strong>
+                    <ul>
+                        <li>O jogo começa automaticamente quando a página é carregada.</li>
+                        <li>Dois jogadores são representados como P1 e P2.</li>
+                        <li>Cada jogador tem quatro peças localizadas em suas bases iniciais.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Jogar os Dados:</strong>
+                    <ul>
+                        <li>Para jogar os dados, clique no botão "Dado".</li>
+                        <li>O valor dos dados será exibido na tela.</li>
+                        <li>Se o valor for 6, você pode mover uma peça da base para a posição inicial.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Mover as Peças:</strong>
+                    <ul>
+                        <li>Após jogar os dados, clique em uma peça que está destacada para movê-la.</li>
+                        <li>As peças só podem ser movidas se o valor dos dados permitir.</li>
+                        <li>Se a peça está na base, você precisa de um 6 para movê-la para a posição inicial.</li>
+                        <li>Se a peça está em movimento, ela se move o número de casas correspondentes ao valor dos dados.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Regras Especiais:</strong>
+                    <ul>
+                        <li>Se você jogar um 6, você tem direito a uma jogada extra.</li>
+                        <li>As peças não podem se mover para a posição de outra peça da mesma cor.</li>
+                        <li>Se uma peça terminar sua jogada na posição de uma peça adversária (fora das zonas seguras), a peça adversária retorna à base.</li>
+                        <li>Cada jogador deve mover suas peças através do tabuleiro, completando uma volta e entrando na linha de chegada para alcançar a casa final.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Vencer o Jogo:</strong>
+                    <ul>
+                        <li>Para vencer, um jogador deve mover todas as suas quatro peças para a casa final (home position).</li>
+                        <li>O primeiro jogador a alcançar a casa final com todas as suas peças vence o jogo.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Reset do Jogo:</strong>
+                    <ul>
+                        <li>Para resetar o jogo, clique no botão "Reset".</li>
+                        <li>Todas as peças retornarão às bases iniciais, e o jogo recomeçará.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="ludo">
+            <div class="player-pieces">
+                <div class="player-piece" player-id="P1" piece="0"></div>
+                <div class="player-piece" player-id="P1" piece="1"></div>
+                <div class="player-piece" player-id="P1" piece="2"></div>
+                <div class="player-piece" player-id="P1" piece="3"></div>
+                
+                <div class="player-piece" player-id="P2" piece="0"></div>
+                <div class="player-piece" player-id="P2" piece="1"></div>
+                <div class="player-piece" player-id="P2" piece="2"></div>
+                <div class="player-piece" player-id="P2" piece="3"></div>
+
+                <div class="player-piece" player-id="P3" piece="0"></div>
+                <div class="player-piece" player-id="P3" piece="1"></div>
+                <div class="player-piece" player-id="P3" piece="2"></div>
+                <div class="player-piece" player-id="P3" piece="3"></div>
+
+                <div class="player-piece" player-id="P4" piece="0"></div>
+                <div class="player-piece" player-id="P4" piece="1"></div>
+                <div class="player-piece" player-id="P4" piece="2"></div>
+                <div class="player-piece" player-id="P4" piece="3"></div>
+            </div>
+
+            <div class="player-bases">
+                <div class="player-base" player-id="P1"></div>
+                <div class="player-base" player-id="P2"></div>
+                <div class="player-base" player-id="P3"></div>
+                <div class="player-base" player-id="P4"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <button id="dice-btn" class="btn btn-dice">Dado</button>
+                <div class="dice-value"></div>
+                <button id="reset-btn" class="btn btn-reset">Reset</button>
+            </div>
+            <h2 class="active-player">Player ativo: <span></span> </h2>
+        </div>
+    </div>
+
+    <script src="./main.js" type="module"></script>
+</body>
+</html>
